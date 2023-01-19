@@ -1,0 +1,90 @@
+*{
+
+}
+
+html{
+    color: rgb(40, 255, 105);
+}
+
+body{
+ background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.7)), to(rgba(255, 255, 255, 0.7))), url("img/dog.png") no-repeat;
+  background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(0, 0, 0, 0.7)), url("img/dog.png") no-repeat;
+  background-size: cover;
+  
+  background-position: center;
+  padding: 3rem 2rem;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgb(0, 0, 0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1.5rem 9%;
+    border-block-color: rgb(255, 123, 0);
+  }
+  
+  .dog{
+    padding: 0;
+
+  }
+
+  .header .navbar a {
+    font-size: 1.0rem;
+    color: #aaa;
+    display: inline-block;
+    margin: 0 rem;
+  }
+  
+  .header .navbar a:hover {
+    color: #26d5e2;
+  }
+  
+  .header .btn {
+    margin-top: 0;
+  }
+ 
+  .header .btn {
+    margin-top: 0;
+  }
+
+.h1t{
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 900;
+
+}
+.nav{
+    color: aliceblue;
+}
+
+.p2{
+    font-family: 'Shippori Mincho', serif;
+    color: rgb(255, 106, 0);
+    font-weight: 700;
+    margin: 0;
+    font-size: 2rem;
+
+
+}
+
+.button{
+    margin: 0%;
+    padding: 1%;
+    text-align: center ;
+    color: rgb(241, 241, 241);
+     border-block-color: rgba(0,225,225);
+     background-color: darkblue;
+     }
