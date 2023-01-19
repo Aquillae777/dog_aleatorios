@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Requisição XMLHttpRequest</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+	
+</head>
+<body>
+	<header class="header">	
+		<div class="container"><img class="dog" src="img/5484229-cao-logo-ilustracao-gratis-vetor.jpg" witdh="0" height="30" alt="Logo Tia Jurema"></div>
+
+		<nav class="navbar">
+			<a  href="">Home</a>
+			<a  href="">contato</a>
+		</nav>	
+	</header>
+
+	<h1 class="h1t">Imagens Aleatórios de Cachorros</h1>
+	<p class="p2"> Você verá as fotos mais Aleatórias sobre os dogs segure-se </p>
+    
+	<img id="img_dog" src="" alt="Aguardando a imagem ser carregada" />
+	<br/>
+	<button class="button" onclick="carregarImagens()">Carregar Imagens</button>
+</body>
+	<script type="text/javascript">
+    
+		function carregarImagens(){
+      
+			var xmlHttpRequest = new XMLHttpRequest();
+			var url = "https://dog.ceo/api/breeds/image/random"
+
+			xmlHttpRequest.open("GET", url, true);
+
+			xmlHttpRequest.onreadystatechange = function() {
+				if (xmlHttpRequest.readyState == 1) {
+					console.log('Carregando o conteúdo');
+				}
+				if (xmlHttpRequest.readyState == 4) {
+                     
+					var jsonResponse = JSON.parse(xmlHttpRequest.responseText);
+       
+					console.log('Requisição Finalizada');
+					console.log('Resultado da Requisição: ' + jsonResponse);
+					console.log('Resultado da Requisição: ' + jsonResponse.message);
+        
+					var imgDog = document.getElementById("img_dog");
+					imgDog.src = jsonResponse.message;
+				}
+			};
+                 
+			xmlHttpRequest.send(null);
+    
+		}
+
+	</script>
+</html>
